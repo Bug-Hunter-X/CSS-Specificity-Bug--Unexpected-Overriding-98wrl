@@ -1,0 +1,43 @@
+The issue can be resolved by adjusting the order of CSS rules (less specific selectors before more specific ones), or by using more specific selectors in the intended way, or by using !important. Here are the possible solutions:
+
+**Solution 1 (Order of Rules):**
+Reverse the order of the rules. This will prioritize the rule to set the green color as it will be read first.
+```css
+p {
+  color: green;
+}
+div {
+  color: blue;
+}
+div p {
+  color: red;
+}
+```
+
+**Solution 2 (More Specific Selector):** 
+Make the less specific selectors more specific if needed, for example, by adding an id or class. 
+```css
+div {
+  color: blue;
+}
+.green-paragraph {
+  color: green;
+}
+div p {
+  color: red;
+}
+```
+
+**Solution 3 (Using !important):**
+Use `!important`, but use sparingly. 
+```css
+div {
+  color: blue;
+}
+p {
+  color: green !important;
+}
+div p {
+  color: red;
+}
+```
