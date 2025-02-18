@@ -1,0 +1,12 @@
+The following CSS code snippet demonstrates an issue where the specificity of selectors can lead to unexpected results.  The intention is to style the paragraph within the div, but due to the specificity of the `div p` selector, the `p` selector is overridden.:
+```css
+div {
+  color: blue;
+}
+p {
+  color: green;
+}
+div p {
+  color: red;
+}
+```
